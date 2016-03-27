@@ -849,10 +849,10 @@ int CWallet::ScanForWalletTransactions(CBlockIndex* pindexStart, bool fUpdate)
         {
             // no need to read and scan block, if block was created before
             // our wallet birthday (as adjusted for block time variability)
-            if (nTimeFirstKey && (pindex->nTime < (nTimeFirstKey - 7200))) {
-                pindex = pindex->pnext;
-                continue;
-            }
+            //if (nTimeFirstKey && (pindex->nTime < (nTimeFirstKey - 7200))) {
+            //    pindex = pindex->pnext;
+            //    continue;
+            //}
 
             CBlock block;
             block.ReadFromDisk(pindex, true);
